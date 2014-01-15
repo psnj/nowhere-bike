@@ -1,0 +1,70 @@
+body {
+    display: block;
+    margin: 0px;
+    padding: 0px;
+    /* color: yellow; */
+    /* background-color: darkslategrey; */
+    /* font-family: "Droid Sans Mono"; */
+    font-family: "Istok Web";
+    font-weight: bold;
+    overflow: hidden;
+}
+
+div.clock {
+    color: darkslategrey;
+    /* background-color: red; */
+    font-size: 60px;
+    padding: 12px;
+    margin: 0px;
+    height: 80px;
+}
+
+div#active {
+    float: left;
+}
+
+div#waste {
+    float: right;
+    /* color: orange; */
+}
+
+.current {
+    color: yellow;
+    background-color: green;
+    font-size: 60px;
+    padding: 12px;
+    margin: 0px;
+    height: 160px;
+}
+
+.pending {
+    /* color: orange; */
+    /* background-color: darkslategrey; */
+    font-size: 60px;
+    padding: 12px;
+    margin: 0px;
+    height: 160px;
+    border-top: thick darkslategrey solid;
+}
+
+.stepclock {
+    float: left;
+    font-size: 150%;
+    width: 30%;
+}
+
+.stepinst {
+    float: left;
+}
+
+.stage_template {
+    display: none;
+}
+
+div#stagelist {
+    overflow: auto;
+}
+
+.warning {
+    background-color: blue;
+}

@@ -1,0 +1,48 @@
+{% extends "base.html" %}
+
+{% block head %}
+<style type="text/css" media="screen">
+#editor {
+    height: 300px;
+    border: 1px solid #DDD;
+    border-radius: 4px;
+    border-bottom-right-radius: 0px;
+    margin-top: 5px;
+}
+</style>
+
+{% endblock head %}
+
+{% block title %}Program {{ desc }}{% endblock title %}
+
+{% block body %}
+<div class="row">
+  <div class="col-md-12">
+    <h1>{{ desc }}</h1>
+    <form role="form" action="/program/{{ id }}" method="post">
+      <div class="form-group">
+        <label for="desc">Program Name</label>
+        <input id="desc" type="text" name="desc" value="{{ desc }}" class="form-control">
+      </div>
+      <Input type="hidden" name="program_code" id="code">
+      <input type="submit" onclick="return f_submit(this)" class="btn btn-primary"
+             value="Save">
+    </form>
+    <div id="editor">{{ code }}</div>
+  </div>
+</div>
+<script src="/static/ace/ace.js" type="text/javascript" charset="utf-8"></script>
+<script>
+var editor = ace.edit("editor");
+editor.setTheme("ace/theme/kuroir");
+editor.getSession().setMode("ace/mode/yaml");
+editor.setFontSize('1em');
+editor.renderer.setShowGutter(false);
+
+function f_submit(frm) {
+   $("#code").val(editor.getValue());
+   return true;
+}
+</script>
+
+{% endblock body %}

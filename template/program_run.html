@@ -1,0 +1,26 @@
+<html>
+  <head>
+    <link type="text/css" rel="stylesheet" media="screen" href="/static/css/nwb-run.css"></link>
+    <script type="text/javascript" src="/static/js/jquery-1.10.2.min.js"></script>
+    <script type="text/javascript" src="/static/js/nwb-run.js"></script>
+    <link href='https://fonts.googleapis.com/css?family=Istok+Web:700' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Droid+Sans+Mono' rel='stylesheet' type='text/css'>
+    <script type="text/javascript">
+      var program = {{ json|safe }};
+    </script>
+  </head>
+  <body>
+    <div id="content">
+      <div class="clock">
+        <div id="active">click to begin!</div>
+        <div id="waste"></div>
+      </div>
+      <div id="stagelist">
+        <div class="stage_template">
+          <div class="stepclock"></div>
+          <div class="stepinst"></div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
